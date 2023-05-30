@@ -1,4 +1,15 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
+const { hostname } = require("os");
 
-module.exports = nextConfig
+/** @type {import('next').NextConfig} */
+const nextConfig = (module.exports = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "",
+      },
+    ],
+  },
+});
+
+module.exports = nextConfig;
